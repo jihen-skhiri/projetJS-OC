@@ -8,8 +8,10 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap" rel="stylesheet">
 	<meta name="description" content="">
+	<link  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">	
 	<link rel="stylesheet" href="./assets/style.css">
-	<script type ="module" src="./assets/gallery.js"></script>
+	<script type ="module" src="./assets/gallery.js" defer></script>
+	<script type ="module" src="./assets/modal.js" defer></script>
 </head>
 <body>
 <header>
@@ -18,7 +20,7 @@
 		<ul>
 			<li>projets</li>
 			<li>contact</li>
-			<li>login</li>
+			<li><a href="login.html">login</a></li>
 			<li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
 		</ul>
 	</nav>
@@ -36,7 +38,16 @@
 		</article>
 	</section>
 	<section id="portfolio">
-		<h2>Mes Projets</h2>
+		<h2>Mes Projets <button class="update" style="display: none;"><i class="fa-regular fa-pen-to-square"></i> modifier</button></h2> 
+		<aside id="modal1" class="modal" style="display: none;">
+			<div class="modal-container stop-modal">
+				<button class="closeBtn"><i class="fa-solid fa-xmark"></i></button>
+				<h2>Galerie photo</h2>
+				<div class="modal-photo"></div>
+				<button class="addPhoto">Ajouter une photo</button>
+			</div>
+
+		</aside>
 		<div class="filter">
 			
 		</div>
