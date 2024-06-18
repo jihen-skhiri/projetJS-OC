@@ -1,4 +1,4 @@
-//import{ db } from "./.../Backend/models/index.js";
+//import{ db } from "./../Backend/models/index.js";
 //const Users = db.users;
 
 const msgError = document.getElementById("msgError"); 
@@ -35,7 +35,7 @@ function loginUser (userId){
         },
         body: JSON.stringify(userId)
     }).then((response) => {
-            if (response.status == 200) {
+            if (response.status !== 200) {
                 msgError.innerHTML="Erreur dans l’identifiant ou le mot de passe";
               } else {
                 response.json().then((data) => {

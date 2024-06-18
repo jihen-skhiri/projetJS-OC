@@ -16,6 +16,7 @@ for(let i=0; i<projects.length; i++) {
     const figcaption = document.createElement("figcaption");
     figcaption.innerHTML = projects[i].title;
     figure.appendChild(figcaption);
+    figure.classList.add(`id-projet-${projects[i].id}`); 
     sectionProjets.appendChild(figure);
 }
 }
