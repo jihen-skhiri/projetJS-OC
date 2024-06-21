@@ -276,18 +276,23 @@ footer nav ul {
 	
 }
 hr {
-	
+	margin-top: 2rem;
 	width:420px;
-	color:rgba(0, 0, 0, 0.3)
+	color:#B3B3B3
+	
 }
 .closeBtn{
 	background-color: #fff;
 	border: none;
 	float: right;
-	cursor: pointer;
-		
+	cursor: pointer;		
 }
-.fa-xmark {
+.backBtn {
+	background-color: #fff;
+	border: none;
+	cursor: pointer;
+}
+.fa-xmark, .fa-arrow-left {
 	font-size: 24px;
 	height: 24px;
 }
@@ -333,6 +338,66 @@ hr {
 	height: 23px;
 	cursor: pointer;
   }
+.fa-image {
+	color: #B9C5CC;
+	width: 67px;
+	height: 60px;
+	font-size: 90px;
+	font-weight: 100;
+	margin-bottom: 40px;
+	margin-top: -25px;
+}
+.modal-form{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	
+}
+.js-image {
+	width:420px;
+	height: 170px;
+	border-radius: 3px;
+	background-color: #E8F1F6;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	
+}
+.titlePhoto, .catPhoto {
+display: flex;
+flex-direction: column;
+ margin-top: 1rem;
+
+}
+input[type="text"], #categorie {
+width: 420px;
+height: 51px;
+top: 1011px;
+margin-top: 1rem;
+box-shadow: 0px 4px 14px 0px #00000017;
+border: none;
+}
+input[type="file"] {
+    display: none;
+}
+.img-label {
+	display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    background-color: #CBD6DC;	
+}
 
   
+#image-preview{
+	width: 129px;
+	height: 193px;
+	top: 774px;
+	left: 655px;
+	gap: 0px;
+	opacity: 0px;
 
+}

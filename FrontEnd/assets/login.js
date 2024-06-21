@@ -1,6 +1,3 @@
-//import{ db } from "./../Backend/models/index.js";
-//const Users = db.users;
-
 const msgError = document.getElementById("msgError"); 
 const email = document.getElementById("email");
 const password = document.getElementById("password");
