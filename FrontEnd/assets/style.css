@@ -94,6 +94,9 @@ nav a {
 	text-decoration: none;
 	color: #000
 }
+nav a:hover{
+	color: #B1663C;
+}
 nav li{
 	padding: 0 10px;
 	font-size: 1.2em;
@@ -362,8 +365,13 @@ hr {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: center;
-	
+	align-items: center;	
+}
+.js-image::after {
+  content: "jpg, png : 4mo max";
+  position: absolute;
+  top:320px;
+  font-size: 10px;
 }
 .titlePhoto, .catPhoto {
 display: flex;
