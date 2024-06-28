@@ -48,7 +48,6 @@ ListCategory ()
 
 function FilterProjects () {
     const filterButtons = document.querySelectorAll(".Button-filter");
-    //identify wich filter button has been clicked
     filterButtons.forEach((i) => {
       i.addEventListener("click", function () {
         FilterCategory(i.dataset.category);
@@ -58,7 +57,6 @@ function FilterProjects () {
   
   function FilterCategory(datasetCategory) {
     const figures = document.querySelectorAll("figure");
-    /*console.log(figures)*/
     if ("Tous" === datasetCategory) {
       figures.forEach((figure) => {
         figure.style.display = "block";

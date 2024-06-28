@@ -83,7 +83,7 @@ function deleteWork() {
         })
     
         .then (response => {
-            if (response.status !== 204) {
+            if (response.status === 204) {
                 refreshPage(this.classList[0])
             }
             else if (response.status === 401) {
@@ -219,9 +219,6 @@ async function addProject(event){
     const image = document.getElementById('photoUpload').files[0];
     const title = document.getElementById("titre").value;
     const categoryId = document.getElementById("categorie").value;
-    console.log(categoryId)
-    console.log(image)
-    console.log(title)
     if (title === "" || categoryId === "" || image === undefined) {
         alert("Merci de remplir tous les champs");
         return;
