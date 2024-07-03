@@ -214,6 +214,10 @@ input[type="submit"], #login button, .addPhoto, .confirmAdd {
 	text-align: center;
 	border-radius: 60px ;
 }
+.confirmAdd {
+	background-color: #A7A7A7;
+	
+}
 #login h2 {
 	text-align: center;
 }
@@ -369,6 +373,7 @@ hr {
 }
 .js-image::after {
   content: "jpg, png : 4mo max";
+  display: var(--after-display, block);
   position: absolute;
   top:320px;
   font-size: 10px;
@@ -397,6 +402,8 @@ input[type="file"] {
     border: 1px solid #ccc;
     border-radius: 50px;
     background-color: #CBD6DC;	
+	width:170px;
+	text-align: center;
 }
 
   

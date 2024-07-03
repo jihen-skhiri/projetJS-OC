@@ -158,7 +158,7 @@ async function ModalForm(){
       imgPreview.setAttribute('style', 'display:none');
       divImg.appendChild(imgPreview)
       const label = document.createElement("label")
-      label.textContent ="+ Ajouter une photo"
+      label.textContent ="+ Ajouter photo"
       label.classList.add("img-label")
       const inputImage = document.createElement("input")
       inputImage.type = 'file';
@@ -219,6 +219,7 @@ async function addProject(event){
     const image = document.getElementById('photoUpload').files[0];
     const title = document.getElementById("titre").value;
     const categoryId = document.getElementById("categorie").value;
+    
     if (title === "" || categoryId === "" || image === undefined) {
         alert("Merci de remplir tous les champs");
         return;
@@ -268,6 +269,8 @@ document.getElementById('photoUpload').addEventListener('change', function(event
             document.getElementById('image-preview').setAttribute('style', 'display:null');
             document.querySelector('.img-label').setAttribute('style', 'display:none');
             document.querySelector('.fa-image').setAttribute('style', 'display:none');
+            document.querySelector('.js-image').style.setProperty('--after-display', 'none');
+            btnConfirmAdd.setAttribute('style', 'background:#1D6154');
         }
         reader.readAsDataURL(image);
     }
@@ -283,4 +286,6 @@ function resetForm() {
     document.getElementById('image-preview').setAttribute('style', 'display:none');
     document.querySelector('.img-label').setAttribute('style', 'display:null');
     document.querySelector('.fa-image').setAttribute('style', 'display:null');
+    document.querySelector('.js-image').style.setProperty('--after-display', 'block');
+    btnConfirmAdd.setAttribute('style', 'background:#A7A7A7');
 }
