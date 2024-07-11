@@ -41,7 +41,7 @@ ListCategory ()
  function InitialButton (){
     const buttonAll = document.createElement("button")
     buttonAll.innerText= "Tous"
-    buttonAll.classList.add("Button-filter")
+    buttonAll.classList.add("Button-filter","Btn-active")
     buttonAll.dataset.category = "Tous";
     filter.appendChild(buttonAll);
 }
@@ -56,7 +56,8 @@ function FilterProjects () {
   }
   
   function FilterCategory(datasetCategory) {
-    const figures = document.querySelectorAll("figure");
+    const buttonAll= document.querySelector('.Btn-active')
+    const figures = document.querySelectorAll(".gallery figure");
     if ("Tous" === datasetCategory) {
       figures.forEach((figure) => {
         figure.style.display = "block";
@@ -65,6 +66,7 @@ function FilterProjects () {
       figures.forEach((figure) => {
         figure.dataset.category === datasetCategory ? (figure.style.display = "block") : (figure.style.display = "none");
       });
+      buttonAll.classList.remove('Btn-active');
     }
   }
   

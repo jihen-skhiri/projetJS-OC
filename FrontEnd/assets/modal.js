@@ -1,12 +1,22 @@
  
 const token = localStorage.getItem("token");
 const btnUpdate = document.querySelector(".update");
+const edition = document.querySelector(".admin-mode");
+const filter = document.querySelector(".filter");
+const loggedBtn = document.querySelector(".logged");
+const logoutBtn = document.querySelector(".logout")
 const reponse = await fetch('http://localhost:5678/api/works')
 const projects = await reponse.json();
 let modal = null;
 let modalAdd = null;
 if (localStorage.getItem("token")) {
     btnUpdate.setAttribute('style', 'display:null');
+    filter.setAttribute('style', 'display:none');
+    edition.setAttribute('style', 'display:null');
+    loggedBtn.setAttribute('style', 'display:none');
+    logoutBtn.setAttribute('style', 'display:null');
+         
+       
 }
 
 

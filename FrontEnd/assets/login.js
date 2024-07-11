@@ -2,21 +2,24 @@ const msgError = document.getElementById("msgError");
 const email = document.getElementById("email");
 const password = document.getElementById("password");
 const loginBtn = document.getElementById("loginBtn");
-
+const loggedBtn = document.querySelector(".logged");
+const logoutBtn = document.querySelector(".logout")
 
 
 loginBtn.addEventListener("click", (e) => {
     e.preventDefault()
-    if(localStorage.getItem("token")){
-        logoutUser();
-    }
-    else {
+   if(localStorage.getItem("token")){
+       logoutUser();    
+   }
+   else {
     let user = {
         email: email.value,
         password: password.value
     };
     
     loginUser(user);
+    
+    
 } 
 })
 
@@ -38,8 +41,9 @@ function loginUser (userId){
                 response.json().then((data) => {
                     
                   localStorage.setItem("token", data.token);
+                  
                  //STORE TOKEN
-              
+                 
                   window.location.href= "index.html";
                   //window.location.replace("index.html");
                   
@@ -58,3 +62,4 @@ function logoutUser() {
         return;
     }
 }
+logoutBtn.addEventListener('click', logoutUser);
